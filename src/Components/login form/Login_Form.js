@@ -11,7 +11,7 @@ function LoginBox(){
             <br/>
             <input type="text"/>
             <br/>
-            <button>Check</button>
+            <input value="Проверить пользователя" type="button"/>
 
 
         </form>

@@ -28,7 +28,7 @@ function App(props) {
                     <Route path="/test_props/*" element={<TestProps callSend={props.callSend} inventory={props.inventory}/>}/>
                 </Routes>
 
-          
+
         </BrowserRouter>
 
      </div>
