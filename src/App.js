@@ -12,7 +12,7 @@ import Login_Form from "./Components/login form/Login_Form";
 
 function App(props) {
 
-
+console.log(props);
 
   return (
 

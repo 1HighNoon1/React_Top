@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
 var inventory={
         'food':2,
         'whater':3,
@@ -13,15 +15,18 @@ var inventory={
 function callSend(NewText){
         inventory[NewText]=10;
         console.log(inventory);
+        rerender(inventory,callSend);
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-
-        <App inventory={inventory} callSend={callSend}/>
-
-);
+function rerender(data,callsend) {
+        console.log('render');
+        root.render(
+            <App inventory={data} callSend={callsend}/>
+        );
+}
+rerender(inventory,callSend);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

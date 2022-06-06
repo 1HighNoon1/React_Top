@@ -1,5 +1,6 @@
 import './TestProps.css';
 import {useRef} from "react";
+import Inventory_record from "../inventory_record/Inventory_record";
 
 
 
@@ -18,26 +19,16 @@ function TestProps(props){
         
     }
 
+    var  value_komponents=[];
+    for (var key in props.inventory) {
+         value_komponents.push(<Inventory_record name={key} count={props.inventory[key]} />)
+    }
 
 
     console.log(props);
   return(
       <div className="allign">
-      <div className="horizont">
-        <ul>
-          <li>food</li>
-          <li>whater</li>
-          <li>suplices</li>
-        </ul>
-
-        <ul>
-          <li>{props.inventory['food']}</li>
-          <li>{props.inventory['whater']}</li>
-          <li>{props.inventory['suplices']}</li>
-        </ul>
-
-      </div>
-
+          {value_komponents}
           <form action="">
 
               <label>Добавить новый продукт:</label>

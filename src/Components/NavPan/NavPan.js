@@ -8,7 +8,7 @@ import NavBox from "../Nav_box/Nav_box";
 function NavPan(){
   return(
   <div className="nav">
-    <LogoBar />
+    <LogoBar className="Login_box" />
     <NavBox />
     <LoginBox />
   </div>
