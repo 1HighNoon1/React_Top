@@ -1,0 +1,9 @@
+.horizont{
+    display: flex;
+}
+
+.allign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
